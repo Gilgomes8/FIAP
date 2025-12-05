@@ -1,0 +1,135 @@
+
+:root {
+    --primary-color: #0d1b2a;
+    --accent-color: #1b263b; 
+    --highlight-bg: #e0e1dd; 
+    --white: #ffffff;
+    --text-dark: #333333;
+    --shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
+    --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+    --radius: 8px;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+.app-container {
+    width: 100%;
+    max-width: 400px;
+    background-color: var(--white);
+    min-height: 100vh;
+    box-shadow: var(--shadow-md);
+    position: relative;
+}
+
+
+@media (min-width: 450px) {
+    .app-container {
+        min-height: 80vh;
+        height: auto;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: var(--shadow-sm);
+}
+
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    width: 24px;
+}
+
+h1 {
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+
+.spacer {
+    width: 24px; 
+}
+
+.balance-section {
+    padding: 40px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.balance-label {
+    font-size: 18px;
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+.balance-display {
+    background-color: var(--highlight-bg);
+    padding: 10px 20px;
+    border-radius: var(--radius);
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--primary-color);
+    min-width: 150px;
+    text-align: center;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.05); 
+}
+
+.actions-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 0 20px 40px 20px;
+}
+
+.btn {
+    background-color: var(--white);
+    border: 1px solid #e0e0e0;
+    padding: 18px;
+    font-size: 16px;
+    color: var(--primary-color);
+    font-weight: 500;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--primary-color);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
